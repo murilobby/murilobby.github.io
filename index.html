@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=8" />
     <script src="script.js?v=5" defer></script>
     <script type="application/ld+json">
       {
@@ -32,8 +32,9 @@
         "@type": "Person",
         "name": "Murilo Lobo",
         "jobTitle": "Estudante de Engenharia de Computação e Desenvolvedor",
+        "url": "https://murilobby.github.io/",
         "email": "mailto:murilolobomacedo.contato@gmail.com",
-        "telephone": "+55 84 99661-0309",
+        "sameAs": ["https://github.com/murilobby"],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Natal",
@@ -50,7 +51,7 @@
     <header class="site-header" data-header>
       <div class="brand">
         <button class="brand-photo" type="button" aria-label="Ampliar foto de Murilo Lobo" aria-haspopup="dialog" aria-controls="profile-photo-dialog" data-photo-open>
-          <img src="foto-bubu.jpg" alt="" width="640" height="640" />
+          <img src="murilo-lobo.jpg" alt="" width="640" height="640" />
         </button>
         <a class="brand-name" href="#inicio" aria-label="Murilo Lobo — início">Murilo Lobo</a>
       </div>
@@ -62,8 +63,8 @@
 
       <nav class="main-nav" aria-label="Navegação principal" data-menu>
         <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
         <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
         <a href="#trajetoria">Trajetória</a>
         <a class="nav-cta" href="#contato">Vamos conversar</a>
       </nav>
@@ -117,7 +118,7 @@
           <ul class="hero-meta" aria-label="Informações principais">
             <li><span>Base</span>Natal, RN</li>
             <li><span>Formação</span>UFRN · 5º período</li>
-            <li><span>Foco atual</span>C++ · Web · APIs</li>
+            <li><span>Foco atual</span>C++ · Visão computacional</li>
           </ul>
         </div>
 
@@ -276,10 +277,124 @@
     </article>
   </div>
 </section>
+      <section class="projects section-space" id="projetos" aria-labelledby="projects-title">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div>
+              <div class="section-index">02 / PROJETOS</div>
+              <h2 class="section-title" id="projects-title">Código que saiu<br /><span>do papel.</span></h2>
+            </div>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-preview console-preview" aria-hidden="true">
+                <div class="preview-browser">
+                  <div class="preview-bar"><i></i><i></i><i></i><span>epi-detection / YOLOv8s</span></div>
+                  <div class="console-body">
+                    <span class="console-label">CONJUNTO DE TESTE · SH17</span>
+                    <code>capacete + colete + pessoa</code>
+                    <div class="console-result"><span>mAP50 · 4 CLASSES</span><code>0,653</code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-topline"><span>PROJETO 01</span><span>VISÃO COMPUTACIONAL</span></div>
+                <h3>Detecção de EPIs<br />com rastreamento</h3>
+                <p>
+                  Detecta capacete e colete em trabalhadores, mantém o ID de cada pessoa no vídeo com
+                  ByteTrack e registra quem ficou sem cada EPI e por quanto tempo.
+                </p>
+                <div class="project-tags"><span>Python</span><span>PyTorch</span><span>YOLOv8</span><span>ByteTrack</span></div>
+                <div class="project-links">
+                  <a href="https://github.com/murilobby/epi-detection" target="_blank" rel="noopener noreferrer">Ver código ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-preview console-preview" aria-hidden="true">
+                <div class="preview-browser">
+                  <div class="preview-bar"><i></i><i></i><i></i><span>OtimizadorPC / Windows 11</span></div>
+                  <div class="console-body">
+                    <span class="console-label">AJUSTES COM BACKUP</span>
+                    <code>54 ajustes com backup</code>
+                    <div class="console-result"><span>ANTES X DEPOIS</span><code>boot · RAM · FPS</code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-topline"><span>PROJETO 02</span><span>DESKTOP / WINDOWS</span></div>
+                <h3>OtimizadorPC<br />para Windows 11</h3>
+                <p>
+                  Otimizador com foco em jogos: ajustes com backup, configurações do driver NVIDIA,
+                  debloat, diagnóstico e medição de FPS antes e depois. Versão 0.5, em testes.
+                </p>
+                <div class="project-tags"><span>C#</span><span>WPF</span><span>Win32</span><span>NVAPI</span></div>
+                <div class="project-links">
+                  <a href="https://github.com/murilobby/OtimizadorPC" target="_blank" rel="noopener noreferrer">Ver código ↗</a>
+                  <a href="https://github.com/murilobby/OtimizadorPC/releases/latest" target="_blank" rel="noopener noreferrer">Baixar ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="project-compact reveal">
+            <div>
+              <div class="project-topline"><span>TAMBÉM NO GITHUB</span><span>C++ / PROGRAMAÇÃO AVANÇADA</span></div>
+              <h3>BigInt — Inteiros sem limite</h3>
+              <p>
+                Classe de inteiros de precisão arbitrária desenvolvida em C++11, com gerenciamento
+                manual de memória, semântica de cópia e movimento e sobrecarga de operadores aritméticos.
+              </p>
+            </div>
+            <div class="project-compact-side">
+              <div class="project-tags"><span>C++11</span><span>POO</span><span>PONTEIROS</span><span>MEMÓRIA DINÂMICA</span></div>
+              <div class="project-links">
+                <a href="https://github.com/murilobby/bigint-cpp" target="_blank" rel="noopener noreferrer">Ver código ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="responsive-case reveal" aria-labelledby="responsive-title">
+            <svg class="device-art" viewBox="0 0 380 235" fill="none" aria-hidden="true">
+              <rect x="20" y="18" width="285" height="170" rx="10" fill="#242e1e" stroke="#6b7c5a" />
+              <path d="M20 42h285M128 188v20m60-20v20m-80 5h100" stroke="#6b7c5a" stroke-width="2" />
+              <g fill="#9bac87"><circle cx="33" cy="30" r="2"/><circle cx="42" cy="30" r="2"/><circle cx="51" cy="30" r="2"/></g>
+              <rect x="39" y="62" width="90" height="7" rx="3" fill="#c8ff2e" />
+              <path d="M39 89h118m-118 11h99m-99 11h78" stroke="#829171" stroke-width="4" />
+              <rect x="39" y="135" width="62" height="20" rx="4" fill="#c8ff2e" />
+              <rect x="186" y="62" width="94" height="99" rx="8" fill="#34442a" stroke="#829171" />
+              <path d="m218 90-12 13 12 13m30-26 12 13-12 13m-10-31-11 38" stroke="#c8ff2e" stroke-width="2" />
+              <rect x="275" y="85" width="84" height="143" rx="13" fill="#edf0e6" stroke="#6b7c5a" stroke-width="2" />
+              <path d="M307 95h20" stroke="#6b7c5a" stroke-width="3" stroke-linecap="round" />
+              <rect x="286" y="112" width="53" height="5" rx="2" fill="#34442a" />
+              <path d="M286 129h58m-58 8h44" stroke="#829171" stroke-width="3" />
+              <rect x="286" y="151" width="62" height="36" rx="5" fill="#d5e6bc" />
+              <rect x="286" y="196" width="62" height="16" rx="4" fill="#34442a" />
+            </svg>
+            <div>
+              <div class="section-index">ESTE PORTFÓLIO / DESIGN RESPONSIVO</div>
+              <h3 id="responsive-title">Um projeto, várias telas.</h3>
+              <p>
+                Esta página também faz parte do meu portfólio: HTML, CSS e JavaScript com layouts
+                adaptáveis, menu mobile e controle de animações. A composição se reorganiza para
+                manter a leitura e os contatos acessíveis em diferentes tamanhos de tela.
+              </p>
+              <ul class="responsive-features">
+                <li>Celular, tablet e desktop</li>
+                <li>CSS Grid e Flexbox</li>
+                <li>Movimento opcional</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="services section-shell section-space" id="servicos" aria-labelledby="services-title">
         <div class="section-heading reveal">
           <div>
-            <div class="section-index">02 / COMO POSSO AJUDAR</div>
+            <div class="section-index">03 / COMO POSSO AJUDAR</div>
             <h2 class="section-title" id="services-title">Ideias digitais,<br /><span>bem executadas.</span></h2>
           </div>
         </div>
@@ -329,110 +444,6 @@
         </div>
       </section>
 
-      <section class="projects section-space" id="projetos" aria-labelledby="projects-title">
-        <div class="section-shell">
-          <div class="section-heading reveal">
-            <div>
-              <div class="section-index">03 / PROJETOS</div>
-              <h2 class="section-title" id="projects-title">Código que saiu<br /><span>do papel.</span></h2>
-            </div>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card project-featured reveal">
-              <div class="project-preview api-preview" aria-hidden="true">
-                <div class="preview-browser">
-                  <div class="preview-bar"><i></i><i></i><i></i><span>/api/items</span></div>
-                  <div class="api-content">
-                    <div class="api-sidebar">
-                      <b>FLASK API</b><span class="active">GET /items</span><span>POST /items</span><span>PUT /items/:id</span><span>DELETE /items/:id</span>
-                    </div>
-                    <div class="api-response"><span>EXEMPLO DE RESPOSTA</span><pre>{
-  "status": "success",
-  "data": [
-    { "id": 1, "item": "ready" }
-  ]
-}</pre></div>
-                  </div>
-                </div>
-              </div>
-              <div class="project-info">
-                <div class="project-topline"><span>PROJETO 01</span><span>BACK-END</span></div>
-                <h3>API REST para<br />Gerenciamento de Itens</h3>
-                <div class="project-status"><span aria-hidden="true"></span> Em desenvolvimento</div>
-                <p>
-                  Back-end em Python e Flask com CRUD, arquitetura modular por Blueprints, validação
-                  de entrada, logs ISO e deploy em nuvem.
-                </p>
-                <div class="project-tags"><span>Python</span><span>Flask</span><span>REST API</span><span>JSON</span></div>
-                <div class="project-links">
-                  <a href="https://replit.com/@murilimzada/Python-Flask-Api" target="_blank" rel="noopener noreferrer">Ver código ↗</a>
-                </div>
-                <p class="project-availability">Demonstração temporariamente indisponível.</p>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-preview web-preview" aria-hidden="true">
-                <div class="web-orb orb-a"></div>
-                <div class="web-orb orb-b"></div>
-                <div class="web-window">
-                  <span class="web-label">SSR / TYPESCRIPT</span>
-                  <strong>Experiência web<br />em cada tela.</strong>
-                  <div class="web-lines"><i></i><i></i><i></i></div>
-                  <div class="web-button"></div>
-                </div>
-              </div>
-              <div class="project-info">
-                <div class="project-topline"><span>PROJETO 02</span><span>FULL STACK</span></div>
-                <h3>Aplicação Web<br />Full Stack</h3>
-                <p>
-                  Aplicação responsiva com React, Next.js e TypeScript, componentização reutilizável
-                  e foco em performance com renderização no servidor.
-                </p>
-                <div class="project-tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>SSR</span></div>
-                <div class="project-links">
-                  <a href="https://codesandbox.io/p/devbox/twilight-voice-3l7p7g" target="_blank" rel="noopener noreferrer">Ver código ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <article class="responsive-case reveal" aria-labelledby="responsive-title">
-            <svg class="device-art" viewBox="0 0 380 235" fill="none" aria-hidden="true">
-              <rect x="20" y="18" width="285" height="170" rx="10" fill="#242e1e" stroke="#6b7c5a" />
-              <path d="M20 42h285M128 188v20m60-20v20m-80 5h100" stroke="#6b7c5a" stroke-width="2" />
-              <g fill="#9bac87"><circle cx="33" cy="30" r="2"/><circle cx="42" cy="30" r="2"/><circle cx="51" cy="30" r="2"/></g>
-              <rect x="39" y="62" width="90" height="7" rx="3" fill="#c8ff2e" />
-              <path d="M39 89h118m-118 11h99m-99 11h78" stroke="#829171" stroke-width="4" />
-              <rect x="39" y="135" width="62" height="20" rx="4" fill="#c8ff2e" />
-              <rect x="186" y="62" width="94" height="99" rx="8" fill="#34442a" stroke="#829171" />
-              <path d="m218 90-12 13 12 13m30-26 12 13-12 13m-10-31-11 38" stroke="#c8ff2e" stroke-width="2" />
-              <rect x="275" y="85" width="84" height="143" rx="13" fill="#edf0e6" stroke="#6b7c5a" stroke-width="2" />
-              <path d="M307 95h20" stroke="#6b7c5a" stroke-width="3" stroke-linecap="round" />
-              <rect x="286" y="112" width="53" height="5" rx="2" fill="#34442a" />
-              <path d="M286 129h58m-58 8h44" stroke="#829171" stroke-width="3" />
-              <rect x="286" y="151" width="62" height="36" rx="5" fill="#d5e6bc" />
-              <rect x="286" y="196" width="62" height="16" rx="4" fill="#34442a" />
-            </svg>
-            <div>
-              <div class="section-index">ESTE PORTFÓLIO / DESIGN RESPONSIVO</div>
-              <h3 id="responsive-title">Um projeto, várias telas.</h3>
-              <p>
-                Esta página também faz parte do meu portfólio: HTML, CSS e JavaScript com layouts
-                adaptáveis, menu mobile e controle de animações. A composição se reorganiza para
-                manter a leitura e os contatos acessíveis em diferentes tamanhos de tela.
-              </p>
-              <ul class="responsive-features">
-                <li>Celular, tablet e desktop</li>
-                <li>CSS Grid e Flexbox</li>
-                <li>Movimento opcional</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <section class="skills section-shell section-space" id="habilidades" aria-labelledby="skills-title">
         <div class="section-heading reveal">
           <div>
@@ -473,17 +484,17 @@
           <article class="skill-group reveal">
             <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="5" y="7" width="38" height="32" rx="5"/><path d="M5 17h38M11 12h1m5 0h1m-1 11-5 5 5 5m14-10 5 5-5 5"/></svg></div>
             <span>02</span><h3>Web & back-end</h3>
-            <div class="skill-tags"><i>React.js</i><i>Next.js</i><i>Angular</i><i>Flask</i><i>REST API</i></div>
+            <div class="skill-tags"><i>React.js</i><i>Next.js</i><i>Flask</i><i>REST API</i></div>
           </article>
           <article class="skill-group reveal">
             <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="11" rx="15" ry="6"/><path d="M9 11v26c0 8 30 8 30 0V11M9 24c0 8 30 8 30 0"/></svg></div>
             <span>03</span><h3>Dados & ferramentas</h3>
-            <div class="skill-tags"><i>PostgreSQL</i><i>MySQL</i><i>SQL</i><i>Git</i><i>GitHub</i><i>Linux</i></div>
+            <div class="skill-tags"><i>PostgreSQL</i><i>SQL</i><i>Git</i><i>GitHub</i><i>Linux</i></div>
           </article>
           <article class="skill-group reveal">
             <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m24 5 16 6v12c0 10-9 16-16 20-7-4-16-10-16-20V11Z"/><rect x="18" y="22" width="12" height="10" rx="2"/><path d="M20 22v-4a4 4 0 0 1 8 0v4"/></svg></div>
             <span>04</span><h3>Em evolução</h3>
-            <div class="skill-tags"><i>OWASP Top 10</i><i>Ethical hacking</i><i>Pentest</i><i>Segurança</i></div>
+            <div class="skill-tags"><i>OWASP Top 10</i><i>Segurança</i></div>
           </article>
         </div>
       </section>
@@ -573,7 +584,6 @@
               <span class="contact-option-copy">
                 <small>RESPOSTA MAIS RÁPIDA</small>
                 <strong>Conversar no WhatsApp</strong>
-                <span>+55 84 99661-0309</span>
               </span>
               <span class="contact-arrow" aria-hidden="true">↗</span>
             </a>
@@ -586,6 +596,18 @@
                 <small>PARA PROPOSTAS E VAGAS</small>
                 <strong>Enviar um e-mail</strong>
                 <span>murilolobomacedo.contato@gmail.com</span>
+              </span>
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="contact-option" href="https://github.com/murilobby" target="_blank" rel="noopener noreferrer">
+              <span class="contact-option-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 6l-4 12"/></svg>
+              </span>
+              <span class="contact-option-copy">
+                <small>CÓDIGO E PROJETOS</small>
+                <strong>Ver meu GitHub</strong>
+                <span>github.com/murilobby</span>
               </span>
               <span class="contact-arrow" aria-hidden="true">↗</span>
             </a>
@@ -612,6 +634,7 @@
           <span>Contato</span>
           <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=murilolobomacedo.contato%40gmail.com&amp;su=Contato%20pelo%20portf%C3%B3lio%20de%20Murilo%20Lobo" target="_blank" rel="noopener noreferrer">E-mail <i>↗</i></a>
           <a href="https://wa.me/5584996610309" target="_blank" rel="noopener noreferrer">WhatsApp <i>↗</i></a>
+          <a href="https://github.com/murilobby" target="_blank" rel="noopener noreferrer">GitHub <i>↗</i></a>
         </div>
 
         <div class="footer-preference">
@@ -633,7 +656,7 @@
     <dialog class="photo-dialog" id="profile-photo-dialog" aria-label="Foto ampliada de Murilo Lobo" data-photo-dialog>
       <div class="photo-dialog-panel">
         <div class="photo-dialog-frame" data-photo-frame>
-          <img src="foto-bubu.jpg" alt="Retrato de Murilo Lobo" width="640" height="640" />
+          <img src="murilo-lobo.jpg" alt="Retrato de Murilo Lobo" width="640" height="640" />
         </div>
         <button class="photo-dialog-close" type="button" aria-label="Fechar foto ampliada" data-photo-close autofocus>×</button>
       </div>
